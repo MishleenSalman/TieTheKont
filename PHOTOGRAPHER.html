@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+h1 {text-align: center; font:"Tangerine"; }
+p {text-align: right; }
+h2 {text-align:right; font-size:20px;}
+</style>
+<link href="categoryStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1 class="glow" >TIE THE KONT</h1>
+<br>
+<p style="text-align: right; font-size:35px; padding-left:12px;">
+בחר צלם
+</p>
+ <table style="width:100%">
+		<tr>
+		<th>
+			<div class="container">
+			<a href="L-Studio.html">
+			<img border="0" src="L-Studio3.jpg"  alt="Notebook" width="400" height="250"> </a>
+			<div class="content">
+			<h2>ל-סטודיו</h2>
+			<p>
+			המטרה שלנו בכל חתונה היא לייצר עבורכם מ
+			קבץ מגוון של תמונות שלא רק יתעדו את היום שלכם בצורה מושלמת</p>
+		</div>
+		</th>
+		<th>
+			<div class="container">
+			<a href="Iden-Hasson.html">
+			<img border="0" src="Iden-Hasson3.jpg"  alt="Notebook" width="400" height="250"> </a>
+			<div class="content">
+			<h2>עדן-חסון</h2>
+			<p>
+			.אמן וצלם חתונות מעל 10 שנים</p>
+		</div>
+		</th>
+		</tr>
+		
+		<tr>
+		<th>
+			<div class="container">
+			<a href="Luz.html">
+			<img border="0" src="Luz7.jpg"  alt="Notebook" width="400" height="250"> </a>
+			<div class="content">
+			<h2>לוז</h2>
+			<p>
+			 . אנחנו חברה צילומי חתונה בינלאומית
+			
+			</p>
+		</div>
+		</th>
+		<th>
+			<div class="container">
+			<a href="Canfi.html">
+			<img border="0" src="Canfi4.jpg"  alt="Notebook" width="400" height="250"> </a>
+			<div class="content">
+			<h2>קנפי</h2>
+			<p>
+			הצוות שלנו תיעדו כבר מאות אירועים , הפקות ופרויקטים גדולים בארץ ובעולם  
+			</p>
+		</div>
+		</th>
+		</tr>
+		
+		
+		
+ 
+ </table>
+<br>
+<br>
+
+		<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+		<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+	 <br>
+	 <br>
+	 
+
+
+</body>
+</html>

